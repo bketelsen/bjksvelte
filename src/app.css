@@ -1,0 +1,20 @@
+@tailwind base;
+
+.prose img {
+  @apply rounded-md shadow-md;
+}
+
+.prose video {
+  @apply rounded-md shadow-md;
+}
+
+.prose {
+  max-width: none;
+}
+
+a {
+  @apply rounded-sm;
+}
+
+@tailwind components;
+@tailwind utilities;

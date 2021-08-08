@@ -37,7 +37,7 @@
   <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
     <div>
       <h2 class="text-3xl tracking-tight font-extrabold text-base-content sm:text-4xl">
-        Recent Articles
+        All Articles
       </h2>
       <p class="mt-3 text-xl text-base-content sm:mt-4">
         Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet.

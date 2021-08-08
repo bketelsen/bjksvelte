@@ -129,7 +129,8 @@
   <div class="relative px-4 sm:px-6 lg:px-8">
     <div class="text-lg max-w-prose mx-auto">
       <h1>
-        <span class="block text-base text-center text-accent font-semibold tracking-wide uppercase"
+        <span
+          class="block text-base text-center text-accent-focus font-semibold tracking-wide uppercase"
           >{article.category?.name}</span
         >
         <span

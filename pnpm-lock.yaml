@@ -28,6 +28,8 @@ specifiers:
   remark-preview: ^1.0.1
   remark-reading-time: ^1.0.1
   svelte: ^3.38.2
+  svelte-burger-menu: ^1.0.5
+  svelte-hamburgers: ^2.0.6
   svelte-preprocess: ^4.7.3
   tailwindcss: ^2.2.4
   theme-change: ^2.0.2
@@ -41,6 +43,8 @@ dependencies:
   date-fns: 2.23.0
   focus-visible: 5.2.0
   reading-time: 1.3.0
+  svelte-burger-menu: 1.0.5
+  svelte-hamburgers: 2.0.6
   theme-change: 2.0.2
 
 devDependencies:
@@ -2492,6 +2496,14 @@ packages:
     dependencies:
       has-flag: 4.0.0
     dev: true
+
+  /svelte-burger-menu/1.0.5:
+    resolution: {integrity: sha512-lP2WqzO5awqgMQ+wuIoBqFASZhtbfjJsSJ529+cW6DpBY4Xg5TZsf3zMwG6QYUD/J7wy2cLYKiUmY2qdDHQdmw==}
+    dev: false
+
+  /svelte-hamburgers/2.0.6:
+    resolution: {integrity: sha512-ipqOp//FJP2IDvnLhHj7o2o3zpC/D1+YcjswB5Y2Ii9Dbmzphx16O7rlEDlfra5MTaqsmg0p/SqReecvzILVbg==}
+    dev: false
 
   /svelte-hmr/0.14.7_svelte@3.42.0:
     resolution: {integrity: sha512-pDrzgcWSoMaK6AJkBWkmgIsecW0GChxYZSZieIYfCP0v2oPyx2CYU/zm7TBIcjLVUPP714WxmViE9Thht4etog==}

@@ -1,0 +1,4 @@
+- Dynamic content & components for article
+- Edit history for article as related content type with date
+- SEO, SEO, SEO
+- figure out auto-posting to social media (from strapi?)

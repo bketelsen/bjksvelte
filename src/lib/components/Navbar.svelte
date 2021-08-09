@@ -1,25 +1,35 @@
 <script>
-  import Logo from './Logo.svelte'
-  import Hamburger from './Hamburger.svelte'
-  import Menu from './Menu.svelte'
-  import { navigating } from '$app/stores'
-
-  export let sidebar = false
-  export let title
-  export let links
-
-  $: if ($navigating == null) {
-    sidebar = false
-  }
+  export let global
 </script>
 
-<header
-  class="navbar flex justify-between items-center mb-2 shadow-lg bg-neutral text-neutral-content"
->
-  <nav class="flex">
-    <Hamburger bind:open={sidebar} />
-    <a href="/"><Logo {title} /></a>
-  </nav>
-
-  <Menu {links} />
-</header>
+<div class="w-full navbar bg-base-300">
+  <div class="flex-none lg:hidden">
+    <label for="my-drawer-3" class="btn btn-square btn-ghost">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="inline-block w-6 h-6 stroke-current"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </label>
+  </div>
+  <div class="flex-1 px-2 mx-2">
+    <span class="uppercase"> {global.title} </span>
+  </div>
+  <div class="flex-none hidden lg:block">
+    <ul class="menu horizontal">
+      {#each global.navigation as nav}
+        <li>
+          <a href={nav.target} class="uppercase rounded-btn">{nav.name}</a>
+        </li>
+      {/each}
+    </ul>
+  </div>
+</div>

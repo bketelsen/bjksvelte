@@ -1,6 +1,6 @@
 <script>
   export let open = false
-  export let links
+  export let global
 </script>
 
 <aside

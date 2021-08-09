@@ -1,3 +1,4 @@
+- navbar menu for desktop + drawer for mobile
 - Dynamic content & components for article
 - Edit history for article as related content type with date
 - SEO, SEO, SEO

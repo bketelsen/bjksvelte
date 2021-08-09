@@ -19,7 +19,6 @@
   import { format } from 'date-fns'
   import { name } from '$lib/info.js'
   import readingTime from 'reading-time'
-  import Feed from '$lib/components/lists/Feed.svelte'
   export let articles
   export let featured
 </script>

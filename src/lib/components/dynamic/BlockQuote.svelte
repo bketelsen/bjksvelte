@@ -1,6 +1,11 @@
+<script>
+  export let quote
+  export let author
+  export let authorLink
+</script>
+
 <blockquote>
   <p>
-    Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque
-    tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.
+    {quote}
   </p>
 </blockquote>

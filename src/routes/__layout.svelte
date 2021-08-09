@@ -23,8 +23,8 @@
 </script>
 
 <div class="bg-base-200 flex flex-col min-h-screen">
-  <Navbar bind:sidebar={open} title={global.headerTitle} />
-  <Sidebar bind:open />
+  <Navbar bind:sidebar={open} title={global.headerTitle} links={global.navigation} />
+  <Sidebar bind:open links={global.navigation} />
 
   <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl">
     <main class="flex flex-col w-full flex-grow py-4 px-4">

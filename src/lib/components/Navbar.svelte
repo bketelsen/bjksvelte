@@ -6,6 +6,7 @@
 
   export let sidebar = false
   export let title
+  export let links
 
   $: if ($navigating == null) {
     sidebar = false
@@ -20,5 +21,5 @@
     <a href="/"><Logo {title} /></a>
   </nav>
 
-  <Menu />
+  <Menu {links} />
 </header>

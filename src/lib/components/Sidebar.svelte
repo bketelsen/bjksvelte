@@ -1,5 +1,6 @@
 <script>
   export let open = false
+  export let links
 </script>
 
 <aside
@@ -7,9 +8,9 @@
   class:open
 >
   <nav class="p-12 text-xl">
-    <a class="block" href="/">Home</a>
-    <a class="block" href="/articles">Articles</a>
-    <a class="block" href="#contact">Contact</a>
+    {#each links as link}
+      <a class="block" href={link.target}>{link.name}</a>
+    {/each}
   </nav>
 </aside>
 

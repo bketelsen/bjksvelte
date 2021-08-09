@@ -15,12 +15,11 @@
 </script>
 
 <script>
-  import ButtonLink from '$lib/components/ButtonLink.svelte'
   import CardHorizontal from '$lib/components/CardHorizontal.svelte'
   import { format } from 'date-fns'
   import { name } from '$lib/info.js'
   import readingTime from 'reading-time'
-
+  import Feed from '$lib/components/lists/Feed.svelte'
   export let articles
   export let featured
 </script>
@@ -29,20 +28,52 @@
   <title>{name}</title>
 </svelte:head>
 
-{#each featured as post}
-  <CardHorizontal {post} hrefBase="/articles/" actionText="Read It!" />
-{/each}
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="pt-8 pb-8 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
   <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
     <div>
-      <h2 class="text-3xl tracking-tight font-extrabold text-base-content sm:text-4xl">
+      <h2 class="text-3xl tracking-tight font-extrabold text-base-content pb-8 sm:text-4xl">
+        Featured
+      </h2>
+    </div>
+    <div class="">
+      {#each featured as article}
+        <a href={'/articles/' + article.slug}>
+          <div class="card shadow-2xl lg:card-side bordered">
+            <figure>
+              <img src="https://picsum.photos/id/1005/400/250" />
+            </figure>
+            <div class="card-body">
+              <div class="badge mb-2 badge-secondary">{article.category.name}</div>
+              <h2 class="card-title">{article.title}</h2>
+              <p>
+                {article.description}
+              </p>
+
+              <div class="card-actions justify-end">
+                <div class="ml-3 flex-1">
+                  <p class="flex text-sm font-medium text-primary justify-end">
+                    <a href="#"> {article.author.name} </a>
+                  </p>
+                  <div class="text-sm">
+                    <p class="flex justify-end">
+                      <time>{format(new Date(article.published_at), 'MMMM d, yyyy')}</time>
+                    </p>
+                    <p class="flex justify-end"><span>{readingTime(article.content).text}</span></p>
+                  </div>
+                </div>
+                <button class="ml-4 btn btn-primary">Read Now</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      {/each}
+    </div>
+    <div>
+      <h2 class="text-3xl tracking-tight font-extrabold text-base-content pt-8 pb-8 sm:text-4xl">
         All Articles
       </h2>
-      <p class="mt-3 text-xl text-base-content sm:mt-4">
-        Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet.
-        Sapien tortor lacus arcu.
-      </p>
+      <p class="mt-3 text-xl text-base-content sm:mt-4">The unfiltered feed.</p>
     </div>
     <div class="mt-12 grid gap-1 pt-4 lg:grid-cols-3 lg:gap-x-2 lg:gap-y-2">
       {#each articles as post}

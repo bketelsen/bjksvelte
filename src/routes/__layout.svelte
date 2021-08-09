@@ -19,11 +19,22 @@
   import Drawer from '$lib/components/Drawer.svelte'
 
   import SocialOnly from '$lib/components/footers/SocialOnly.svelte'
+  import { getStores } from '$app/stores'
+
+  let { navigating } = getStores()
+  let checked = false
+
+  $: {
+    if ($navigating === null) {
+      checked = false
+    }
+  }
+
   export let global
 </script>
 
 <div class="bg-base-200 min-h-screen drawer">
-  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" bind:checked />
   <div class="flex flex-col drawer-content">
     <Navbar {global} />
     <div class="mx-auto flex flex-col flex-grow w-full max-w-4xl">

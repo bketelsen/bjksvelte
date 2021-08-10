@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: {
-    content: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],
+    content: ['./public/**/*.html', './src/**/*.{js,jsx,svelte,ts,tsx}'],
     options: {
       safelist: [
         /data-theme$/,

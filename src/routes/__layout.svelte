@@ -1,11 +1,12 @@
 <script context="module">
-  export async function load({ page: { query }, fetch }) {
+  export async function load({ page, fetch }) {
     const gres = await fetch('/global.json')
     var global = await gres.json()
 
     return {
       props: {
-        global: global
+        global: global,
+        path: page.path
       }
     }
   }
@@ -19,9 +20,11 @@
   import Drawer from '$lib/components/Drawer.svelte'
 
   import SocialOnly from '$lib/components/footers/SocialOnly.svelte'
+
+  import GlobalSEO from '$lib/components/GlobalSEO.svelte'
   import { getStores } from '$app/stores'
 
-  let { navigating } = getStores()
+  let { navigating, page } = getStores()
   let checked = false
 
   $: {
@@ -29,9 +32,11 @@
       checked = false
     }
   }
-
+  export let path
   export let global
 </script>
+
+<GlobalSEO {global} {path} />
 
 <div class="bg-base-200 min-h-screen drawer">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" bind:checked />

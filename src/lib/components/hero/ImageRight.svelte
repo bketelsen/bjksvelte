@@ -12,6 +12,8 @@
       src={image.formats['400'][0].url}
       alt={image.alternativeText || 'Brian'}
       class="max-w-sm shadow-2xl"
+      height={image.formats['400'][0].height}
+      width={image.formats['400'][0].width}
     />
     <div>
       <h1 class="mb-5 text-5xl font-bold">{title}</h1>

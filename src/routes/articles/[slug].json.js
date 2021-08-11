@@ -3,18 +3,22 @@
  */
 
 import { compile } from 'mdsvex'
+import rehypePicture from '$lib/rehype-image'
 
 const mdsvexOptions = {
 	extension: ".md",
-	rehypePlugins: [],
+	rehypePlugins: [rehypePicture],
 	remarkPlugins: []
 
 }
-export async function get({ params }) {
+export async function get({ params, locals }) {
 	// the `slug` parameter is available because this file
 	// is called [slug].json.js
 	const endpoint = import.meta.env.VITE_API_ENDPOINT
 	const { slug } = params;
+
+
+
 
 	const q = endpoint + `/articles?slug=${slug}`
 	const res = await fetch(q);

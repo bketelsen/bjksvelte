@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static'
+import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -6,7 +6,7 @@ const config = {
   // for more information about preprocessors
   kit: {
     target: '#svelte',
-    adapter: adapter()
+    adapter: vercel()
   }
 }
 

@@ -1,11 +1,8 @@
 <script context="module">
-  export async function load({ page, fetch }) {
-    const gres = await fetch('/global.json')
-    var global = await gres.json()
-
+  export async function load({ page, session }) {
     return {
       props: {
-        global: global,
+        global: session.global,
         path: page.path
       }
     }
@@ -24,7 +21,7 @@
   import GlobalSEO from '$lib/components/GlobalSEO.svelte'
   import { getStores } from '$app/stores'
 
-  let { navigating, page } = getStores()
+  let { navigating } = getStores()
   let checked = false
 
   $: {

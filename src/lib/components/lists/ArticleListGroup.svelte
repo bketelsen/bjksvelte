@@ -6,6 +6,7 @@
   export let title
   export let subtitle
   export let articles
+  console.log(articles[0].author.picture)
 </script>
 
 <TitleAndSub {title} {subtitle} />
@@ -26,7 +27,7 @@
                 <span class="sr-only">{post.author.name}</span>
                 <img
                   class="h-10 w-10 rounded-full"
-                  src={post.author.picture.formats.thumbnail.url}
+                  src={post.author.picture.url}
                   alt={post.author.picture.alternativeText}
                   width="10"
                   height="10"

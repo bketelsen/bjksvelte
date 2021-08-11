@@ -18,7 +18,7 @@
     <div>
       <h1 class="mb-5 text-5xl font-bold">{title}</h1>
       <p class="mb-5">{body}</p>
-      <a href={ctaLink}><button class="btn btn-primary">{ctaText}</button></a>
+      <a href={ctaLink}><button class="btn btn-primary text-primary-content">{ctaText}</button></a>
     </div>
   </div>
 </div>

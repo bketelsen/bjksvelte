@@ -3,7 +3,7 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ page, fetch, session, context }) {
-    const url = `/articles/${page.params.slug}.json`
+    const url = `/blog/${page.params.slug}.json`
     const res = await fetch(url)
     const data = await res.json()
     if (res.ok) {
@@ -33,7 +33,7 @@
     article.title
   )}**?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`
 
-  const url = `${website}/articles/${article.slug}`
+  const url = `${website}/blog/${article.slug}`
 </script>
 
 <svelte:head>

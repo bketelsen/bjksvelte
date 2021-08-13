@@ -15,7 +15,7 @@
     <a href={'/blog/' + post.slug}>
       <div class="card shadow-2xl">
         <div class="card-body">
-          <div class="badge mb-2 badge-accent">{post.category.name}</div>
+          <div class="badge mb-2 badge-primary">{post.category.name}</div>
           <h2 class="card-title">
             {post.title}
           </h2>

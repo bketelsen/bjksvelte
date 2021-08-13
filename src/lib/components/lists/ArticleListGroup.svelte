@@ -39,7 +39,7 @@
               </p>
               <div class="text-sm">
                 <p class="flex justify-end">
-                  <time>{format(new Date(post.published_at), 'MMMM d, yyyy')}</time>
+                  <time>{format(new Date(post.publish_date), 'MMM d, yyyy')}</time>
                 </p>
                 <p class="flex justify-end"><span>{readingTime(post.content).text}</span></p>
               </div>

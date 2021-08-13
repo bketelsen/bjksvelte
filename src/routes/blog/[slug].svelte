@@ -70,8 +70,8 @@
           >{article.title}</span
         >
         <span class="block text-base text-center text-primary pt-2">
-          <time datetime={new Date(article.published_at).toISOString()}
-            >{format(new Date(article.published_at), 'MMMM d, yyyy')}</time
+          <time datetime={new Date(article.publish_date).toISOString()}
+            >{format(new Date(article.publish_date), 'MMMM d, yyyy')}</time
           >
           • {readingTime(article.content).text}
         </span>

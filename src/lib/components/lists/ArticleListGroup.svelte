@@ -6,7 +6,6 @@
   export let title
   export let subtitle
   export let articles
-  console.log(articles[0].author.picture)
 </script>
 
 <TitleAndSub {title} {subtitle} />

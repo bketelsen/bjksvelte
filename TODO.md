@@ -1,3 +1,4 @@
 - Edit history for article as related content type with date
 - SEO, SEO, SEO
 - figure out auto-posting to social media (from strapi?)
+- OG image generation - either from api already built or some other way?

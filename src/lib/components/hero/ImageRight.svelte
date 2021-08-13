@@ -9,11 +9,10 @@
 <div class="hero bg-base-200">
   <div class="flex-col hero-content lg:flex-row-reverse">
     <img
-      src={image.formats['800'][0].url}
+      src={image.formats.small.url}
       alt={image.alternativeText || 'Brian'}
-      class="max-w-sm shadow-2xl"
-      height={image.formats['800'][0].height}
-      width={image.formats['800'][0].width}
+      height="300"
+      width="300"
     />
     <div>
       <h1 class="mb-5 text-5xl font-bold">{title}</h1>

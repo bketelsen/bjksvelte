@@ -17,9 +17,6 @@ export async function get({ params, locals }) {
 	const endpoint = import.meta.env.VITE_API_ENDPOINT
 	const { slug } = params;
 
-
-
-
 	const q = endpoint + `/articles?slug=${slug}`
 	const res = await fetch(q);
 	var article = await res.json();

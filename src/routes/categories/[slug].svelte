@@ -51,7 +51,7 @@
     </div>
     <div class="mt-12 grid gap-1 pt-4 lg:grid-cols-3 lg:gap-x-2 lg:gap-y-2">
       {#each category.articles as post}
-        <a href={'/articles/' + post.slug}>
+        <a href={'/blog/' + post.slug}>
           <div class="card shadow-2xl">
             <div class="card-body">
               <div class="badge mb-2 badge-secondary">{category.name}</div>

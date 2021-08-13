@@ -32,14 +32,13 @@ export default function rehypePicture(data) {
       }
 
       const src = String(node.properties.src)
-      console.log("image source", node.properties)
       const extension = path.extname(src).slice(1)
 
 
 
       /** @type {Element['children']} */
       const nodes = []
-      const map = settings[extension]
+      const map = uploads[extension]
       /** @type {string} */
       let key
 
